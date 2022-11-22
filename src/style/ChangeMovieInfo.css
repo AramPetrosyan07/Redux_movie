@@ -1,0 +1,26 @@
+.main_changeMovie{
+    background-color: #100e19;
+}
+
+.changeMovie_container{
+    width: 95%;
+    min-height: calc(100vh - 90px);
+    margin: 0 auto;
+}
+
+.changeMovie_select_input{
+    width: 270px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.changeMovie_select_input>button, .changeMovie_select_input>input{
+    padding: 4px;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #d4cbf7;
+}

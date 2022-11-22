@@ -1,0 +1,56 @@
+
+.shareClose{
+    width: 40px;
+    height: 0px;
+    /* margin-left: 70px; */
+}
+
+
+.share_icon_div{
+    width: 40px;
+    height: 40px;
+    padding-right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #ea003d; */
+    border-radius: 20px;
+}
+
+
+ShareIcon{
+    width: 100%;
+}
+.shareOpen{
+    width: 200px;
+    height: 60px;
+    /* margin-left: 70px; */
+    /* background-color: #ea003d; */
+    display: flex;
+}
+.searchIcons_flex{
+    display: flex;
+}
+
+.searchIcons_flex{
+    width: 40px;
+    height: 40px;
+}
+
+.iconFb{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.copy_button{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    background-color: rgb(168, 168, 168);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    cursor: pointer;
+}

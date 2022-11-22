@@ -1,0 +1,24 @@
+.recommended_movies_container{
+    width: 100%;
+    height: 320px;
+    margin-top: 100px;
+    background-color: #312b4591;
+    border-radius: 20px;
+}
+
+.recommended_movies_container>p{
+    color: #bcb1df91;
+    font-size: 30px;
+    line-height: 56px;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+}
+
+.demo_recomended_warning{
+    width: 100%;
+}
+
+.demo_recomended_warning>h3{
+    text-align: center;
+}

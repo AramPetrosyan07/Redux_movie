@@ -1,0 +1,66 @@
+.createMovie_container{
+    width: 95%;
+    min-height: calc(100vh - 200px);
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow: hidden;
+    /* padding-top: 50px; */
+    /* padding: 50px 10px 0 10px; */
+}
+
+.createMovie_bg, .createMovie_NDD, .createMovie_IIG{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.createMovie_bg>input{
+    width: 48%;
+}
+
+.createMovie_NDD>input, .createMovie_IIG>input{
+    width: 31%;
+}
+.createMovie_actorsDiv{
+    display: flex;
+    justify-content: space-around;
+}
+
+.createMovie_actors1, .createMovie_actors2, .createMovie_actors3{
+    width: 31%;
+}
+
+.createMovie_actors1>input, .createMovie_actors2>input, .createMovie_actors3>input{
+    width: 100%;
+}
+
+.createMovie_forms input{
+    outline: none;
+    border: none;
+    background-color: #312b45;
+    font-size: 20px;
+    padding: 4px 10px;
+    margin: 10px 0;
+    border-radius: 20px;
+    color: #d7cdf7;
+}
+
+.disabled{
+    color: rgb(255, 80, 80);
+}
+.createMovie_create_buttonDiv{
+    width: 250px;
+    margin: 0 auto;
+}
+
+.createMovie_text_warning{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    /* background-color: #ae98f7; */
+    text-align: center;
+    color: red;
+    font-weight: 600;
+    font-size: 18px;
+}

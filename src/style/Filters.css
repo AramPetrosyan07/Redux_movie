@@ -1,0 +1,32 @@
+.main_filters{
+    width: 100%;
+    background-color: #2a2342;
+    margin-top: 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.filter_data_container{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 15;
+}
+
+.filter_data_container>div{
+    margin: 0px 5px;
+    font-size: 15px;
+}
+
+@media (max-width: 622px) {
+    .main_filters{
+        height: 100px;
+    }
+    .filter_data_container>div{
+        margin: 5px 5px;
+    }
+}

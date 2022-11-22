@@ -1,0 +1,47 @@
+.main_header{
+    width: 100%;
+    
+    min-height: calc(100vh - 60px);
+    background-color: #100e19;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_container{
+    width: 95%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.header_movie_item{
+    width: 150px;
+    height: 280px;
+    margin: 20px 0;
+    background-color:  #312b45;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.heaer_movie_imgBg{
+    width: 150px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.info_about_headerMovieItem{
+    margin-left: 5px;
+}
+
+.header_info_name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #d1c3ff;
+    text-align: center;
+}

@@ -1,0 +1,18 @@
+.main_loading{
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #100e19;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading_gif{
+    position: absolute;
+    top: calc(50% - 80px);
+    left: calc(50% - 100px);
+}
+
+.loading_logo{
+    position: relative;
+}

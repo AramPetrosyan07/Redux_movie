@@ -1,0 +1,10 @@
+.main_settings{
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #100e19;
+}
+
+.adminBox_div{
+    width: 97%;
+    margin: 0 auto;
+}

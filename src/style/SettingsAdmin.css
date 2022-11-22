@@ -1,0 +1,33 @@
+.settingsAdmin{
+    width: 95%;
+    /* height: calc(100vh - 20px); */
+    margin: 0 auto;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.settingsAdmin_p_parent{
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+    color: #d4cbf7;
+}
+
+.settingsAdmin_p_parent>p{
+    text-align: center;
+}
+
+.handleButtonReg{
+    width: 250px;
+    padding: 5px 50px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #312b45;
+    border: none;
+    font-size: 17px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: #d7cdf7;
+}
+

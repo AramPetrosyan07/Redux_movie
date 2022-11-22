@@ -1,0 +1,92 @@
+.set_user_container{
+    width: 95%;
+    padding-top: 50px;
+    /* background-color: bisque; */
+    margin: 0 auto;
+}
+
+.set_user_infoDiv:nth-child(1) {
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.set_user_infoDiv:nth-child(1) .set_user_infoSpan{
+    /* background-color: red; */
+    font-size: 40px;
+    font-weight: 500;
+}
+.set_user_infoSpan{
+    color: #d4cbf7;
+}
+
+.set_user_infoDiv{
+    color: #d4cbf7;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.set_user_infoDiv input, .set_user_infoDiv button{
+    border: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.changeInfoInput{
+    background-color: #d4cbf7;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.changeInfoButtons{
+    background-color: #584d7a;
+    cursor: pointer;
+}
+
+.buttorRadius{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.set_user_infoDiv:nth-child(2),
+.set_user_infoDiv:nth-child(3){
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
+.set_user_infoEdit{
+    /* opacity: 0; */
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* .set_user_infoSpan:hover + .set_user_infoEdit{
+    opacity: 1;
+} */
+
+/* .set_user_infoEdit:hover{opacity: 1;}
+ */
+
+
+ .logOut_button{
+    width: 200px;
+    height: 32px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+ }
+
+ .logOut_button>button{
+    width: 100%;
+    height: 32px;
+    padding-bottom: 8px;
+    color: #fcb6c9;
+    background-color: #ea003d;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+
+ }

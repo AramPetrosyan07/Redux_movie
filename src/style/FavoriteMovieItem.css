@@ -1,0 +1,23 @@
+.favorite_movie_item,
+.favorite_movie_background{
+    width: 80px;         
+    height: 130px;
+}
+
+.favorite_movie_item{
+    display: block;
+    margin: 12px;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.favorite_outline{
+    position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 5px solid white;
+  border-radius: 27px;
+}

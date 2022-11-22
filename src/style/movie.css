@@ -1,0 +1,90 @@
+.mainMovieDiv{
+    width: 200px;
+    height: 350px;
+    margin: 0 5px 20px 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.mainMovieDiv:hover h4{
+ color: white;
+}
+.movieDiv {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.imgDiv {
+    width: 200px;
+    height: 330px;
+    z-index: 2;
+}
+
+
+.afterDiv-insideImgDiv {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+}
+
+
+
+.movie_hover_info{
+    width: 200px;
+    height: 350px;
+    position: absolute;
+    border-radius: 20px;
+    transition: all 0.2s;
+    z-index: 10;
+    opacity: 0;
+}
+
+.movie_hover_info:hover{
+    background-color: rgba(0, 0, 0, 0.801);
+opacity: 1;
+}
+
+.movie_hover_info_div{
+    margin-top: 220px;
+    margin-left: 10px;
+}
+.movie_hover_info_div>p{
+    color: white;
+    font-weight: 500;
+}
+
+.movieName{
+    color: #c6b9f1;
+    text-align: center;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.2s;
+}
+
+.displayNone{
+    display: none;
+}
+
+@media  (max-width: 700px) {
+    .mainMovieDiv{
+        width: 140px;
+        height: 245px;
+        margin: 0 5px 20px 5px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .imgDiv {
+        width: 120px;
+        height: 210px;
+        margin: 0 auto;
+        z-index: 2;
+    }
+    .movieName{
+        font-size: 14px;
+    }
+}
