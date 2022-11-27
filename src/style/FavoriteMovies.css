@@ -66,3 +66,11 @@
     background-color: #ea003d;
     border-radius: 20px;
 }
+
+@media (max-width: 400px){
+    .play_button{
+        width: 100px;
+        height: 40px;
+        font-size: 12px;
+    }
+}

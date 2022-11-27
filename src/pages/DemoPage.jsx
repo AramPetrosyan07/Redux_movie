@@ -3,13 +3,16 @@ import InfoDetailWithBG from "components/InfoDetailWithBG";
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { motion } from "framer-motion";
-import { data } from "dataBase";
 import { addMovie } from "store/slices/moviesSlice";
+import { useLocation } from "react-router-dom";
 
 const DemoPage = ({ demo }) => {
   const { movies } = useSelector((state) => state.movies);
   const [rgbColor, setRgbColor] = useState("#100e19");
   const dispatch = useDispatch();
+  let location = useLocation();
+
+  let pathname = location.pathname.split("/")[2];
 
   const getColorOfBackground = () => {
     if (demo.background) {
@@ -58,13 +61,12 @@ const DemoPage = ({ demo }) => {
             }}
             whileTap={{ scale: 0.95 }}
             onClick={() => {
-              console.log("add");
               if (demo !== null) {
                 dispatch(addMovie(demo));
               }
             }}
           >
-            Add movie
+            {pathname === "createmovie" ? "Add movie" : "Change movie"}
           </motion.button>
         </div>
       </div>

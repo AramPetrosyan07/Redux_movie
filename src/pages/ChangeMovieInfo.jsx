@@ -10,7 +10,6 @@ const ChangeMovieInfo = () => {
   const { movies } = useSelector((state) => state.movies);
 
   const selectMovie = () => {
-    console.log(selectMovieName);
     let selectMovie = movies.find((movie) => movie.name === selectMovieName);
     setSelectedMovie(selectMovie);
   };

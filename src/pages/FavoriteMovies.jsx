@@ -4,7 +4,7 @@ import { useGetObjectsById } from "hooks/useGetObjectsById";
 import useWindowDimensions from "hooks/WindowDimensions";
 import React, { useMemo, useState } from "react";
 import { useSelector } from "react-redux";
-import { motion, AnimateSharedLayout } from "framer-motion";
+import { AnimateSharedLayout } from "framer-motion";
 import "../style/FavoriteMovies.css";
 import { useNavigate } from "react-router-dom";
 import ShareBtn from "components/ShareBtn";

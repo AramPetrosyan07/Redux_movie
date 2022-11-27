@@ -1,12 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import React from 'react';
-// import HomePage from "./pages/HomePage";
 import Layout from "./components/Layout";
 import RequireAuth from "./components/RequireAuth";
 import RequireAuthAdmin from "./components/RequireAuthAdmin";
 import LoginPage from "pages/LoginPage";
 import RegisterPage from "pages/RegisterPage";
-import { useScroll } from "framer-motion";
 import DetailPage from "pages/DetailPage";
 import ActorDetailPage from "pages/ActorDetailPage";
 import FavoriteMovies from "pages/FavoriteMovies";
@@ -18,32 +16,9 @@ import CreateMovie from "pages/CreateMovie";
 import ChangeMovieInfo from "pages/ChangeMovieInfo";
 import ForgetPass from "pages/ForgetPass";
 import LoadingPage from "pages/LoadingPage";
-const LazyHome = React.lazy(() => import('./pages/HomePage'))
-
+import HomePage from "./pages/HomePage";
 
 function App() {
-    const { scrollY } = useScroll()
-    // dranov menq ashxatacnum enq getAllMoviesThunk funkcian vor@ json serveric data a stanum u qcum movieslice i mej, 
-    //bayc qani vor hostingi tak chi ashxatum json server@ coment ari zut etqan mas@ u datan dreci dataBase.js i mej
-    // const dispatch = useDispatch();
-    // useEffect(() => {
-    //     dispatch(getAllMoviesThunk())
-    // }, [dispatch])
-
-
-    // notification i kodn a
-    // const auth = getAuth();
-    // onAuthStateChanged(auth, (user) => {
-    //     if (user) {
-    //         const uid = user.uid;
-    //         console.log(user);
-    //         // dispatch(login(user.email))
-    //         console.log('user ka !!!!!!!!!');
-    //     } else {
-    //         console.log('user chka');
-    //     }
-    // });
-
     return (
         <Routes>
             <Route path="/" element={<Layout />}>
@@ -51,11 +26,9 @@ function App() {
                     index
                     element={
                         <RequireAuth>
-                            <React.Suspense fallback={<LoadingPage />}>
-                                <LazyHome />
-                            </React.Suspense>
-                        </RequireAuth>
 
+                            <HomePage />
+                        </RequireAuth>
                     }
                 />
                 <Route path="/login" element={<LoginPage />} />

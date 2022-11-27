@@ -1,5 +1,7 @@
 .mainSearch>input{
     margin-right: 10px;
+    color: #d4cbf7;
+    background-color: #312b45;
     font-size: 16px;    
     padding: 5px 10px;
     border-radius: 20px;

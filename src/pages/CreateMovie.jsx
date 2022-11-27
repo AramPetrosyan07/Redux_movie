@@ -3,14 +3,13 @@ import "../style/CreateMovie.css";
 import { useForm } from "react-hook-form";
 import Create from "components/Create";
 import { motion } from "framer-motion";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import DemoPage from "./DemoPage";
 
 const CreateMovie = ({ page = "createMovie", getData }) => {
   const { movies } = useSelector((state) => state.movies);
   const [errText, setErrText] = useState("");
   const [demoObj, setDemoObj] = useState(null);
-  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
@@ -18,7 +17,6 @@ const CreateMovie = ({ page = "createMovie", getData }) => {
   } = useForm({ mode: "onChange" });
 
   const handleCreate = (data) => {
-    console.log(data);
     const demoObj = {
       id: movies.length + 1,
       name: `${data.name}`,
@@ -54,9 +52,6 @@ const CreateMovie = ({ page = "createMovie", getData }) => {
       ],
     };
     getData(demoObj);
-    // {
-    //   page === "changeMovie" && dispatch(changeMovie(demoObj));
-    // }
     setDemoObj(demoObj);
   };
 

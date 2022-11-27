@@ -546,7 +546,7 @@ export let data = [
         "image": "https://m.media-amazon.com/images/I/41uE9+ttcBL.jpg",
         "background": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982111007/after-9781982111007_hr.jpg",
         "ifream": " https://www.youtube.com/embed/rPTf0Gw5-Bg  ",
-        "genre": "Мелодрамы, ДрамыЗару, бежные",
+        "genre": "Мелодрамы, Драмы, бежные",
         "actors": [
             {
                 "image": "https://i.pinimg.com/736x/0e/45/1f/0e451f2c512b3ece041af80586d54a37.jpg",

@@ -19,7 +19,6 @@ const moviesSlice = createSlice({
             state.searchFilter = payload
         },
         changeRateingMovie: (state, { payload }) => {
-            console.log('arr', payload);
             state.movies = payload;
         },
         addMovie: (state, { payload }) => {

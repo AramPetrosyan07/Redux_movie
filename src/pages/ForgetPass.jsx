@@ -1,26 +1,22 @@
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const ForgetPass = () => {
+  const [send, setSend] = useState(NaN);
+
   const {
     register,
     handleSubmit,
-    reset,
     formState: { isValid, errors },
   } = useForm({ mode: "onChange" });
 
   const getEmail = (data) => {
     const auth = getAuth();
     sendPasswordResetEmail(auth, data.email)
-      .then((res) => {
-        console.log("all right");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      .then((res) => setSend(1))
+      .catch((error) => setSend(2));
   };
-
   return (
     <div className="mainLogin">
       <div className="login">
@@ -30,24 +26,18 @@ const ForgetPass = () => {
               id="firstname"
               className="input"
               type="email"
-              placeholder="a"
+              placeholder="_"
               {...register("email", {
                 required: { value: true, message: "Email is required !!!" },
               })}
-              s
             />
             <div className="cut"></div>
             <label htmlFor="firstname" className="placeholder">
               email
             </label>
           </div>
-          {errors && errors.email && (
-            <p className="warning">{errors.email.message}</p>
-          )}
+          {errors.email && <p className="warning">{errors.email.message}</p>}
 
-          {errors && errors.pass && (
-            <p className="warning">{errors.pass.message}</p>
-          )}
           <div>
             <button
               disabled={!isValid}
@@ -55,6 +45,17 @@ const ForgetPass = () => {
             >
               Change password
             </button>
+          </div>
+          <div className="warningForgetPassDiv">
+            {send === 1 ? (
+              <p className="warningForgetPass send">
+                The message has been sent
+              </p>
+            ) : send === 2 ? (
+              <p className="warningForgetPass notSend">
+                The message was not sent
+              </p>
+            ) : null}
           </div>
         </form>
       </div>

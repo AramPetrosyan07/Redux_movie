@@ -5,7 +5,7 @@ const SignUp = ({ isValid }) => {
     <div>
       <button
         disabled={!isValid}
-        className={isValid ? "handleButtonReg" : "handleButtonReg disabled"}
+        className={isValid ? "handleButton" : "handleButton disabled"}
       >
         Sign Up
       </button>

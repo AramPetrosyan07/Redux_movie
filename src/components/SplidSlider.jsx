@@ -1,5 +1,5 @@
 import React from "react";
-import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/skyblue";
 import "../style/SplidSlider.css";
 import { useGetObjectsById } from "hooks/useGetObjectsById";

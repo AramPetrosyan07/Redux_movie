@@ -1,28 +1,30 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
 import "../style/Login.css";
-import Auth from "hooks/Auth";
+import { useState } from "react";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
+  const [errLogOrPass, setErrLogOrPass] = useState("");
+
   const {
     register,
     handleSubmit,
-    reset,
     formState: { isValid, errors },
   } = useForm({ mode: "onChange" });
 
   const handleLogin = (data) => {
+    setErrLogOrPass("");
     const auth = getAuth();
-    signInWithEmailAndPassword(auth, data.email, data.pass).then(
-      (userCredential) => {
+    signInWithEmailAndPassword(auth, data.email, data.pass)
+      .then((userCredential) => {
         if (userCredential.user.uid) {
           localStorage.setItem("uid", userCredential.user.uid);
-          Auth(userCredential.user.uid);
+          navigate("/");
         }
-      }
-    );
+      })
+      .catch((err) => setErrLogOrPass(err.message));
   };
 
   return (
@@ -68,6 +70,11 @@ const LoginPage = () => {
           </div>
           {errors && errors.pass && (
             <p className="warning">{errors.pass.message}</p>
+          )}
+          {errLogOrPass === "Firebase: Error (auth/user-not-found)." ? (
+            <p className="warning">The password or email is incorrect</p>
+          ) : (
+            ""
           )}
           <div>
             <button

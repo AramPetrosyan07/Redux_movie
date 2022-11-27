@@ -4,15 +4,18 @@ import { setUser } from 'store/slices/userSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import { setLargeBgMovies } from 'store/slices/moviesSlice';
+import { getAllMovies, setLargeBgMovies } from 'store/slices/moviesSlice';
+import { data } from '../dataBase';
 
-export default function Auth(uid) {
+export default function useAuth(uid) {
     const { movies } = useSelector((state) => state.movies);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+
     useEffect(() => {
         getUser(uid)
+        dispatch(getAllMovies(data));
     }, [uid])
 
     useEffect(() => {
@@ -55,5 +58,4 @@ export default function Auth(uid) {
         );
         navigate("/");
     }
-
 }

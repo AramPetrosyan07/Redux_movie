@@ -51,7 +51,6 @@ const InfoDetailWithBG = ({ movie, movies }) => {
       </div>
       <div>
         <RecommendedMovies movies={movies} movieId={movie.id} />
-        <div>width: {width}</div>
       </div>
     </div>
   );

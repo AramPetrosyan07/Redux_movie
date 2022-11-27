@@ -13,7 +13,6 @@ const ActorDetailPage = () => {
   const { width } = useWindowDimensions();
 
   const actorObj = movies[+id - 1].actors[+actorId];
-  console.log(actorObj);
 
   const moviesIdByActor = [];
 
@@ -24,7 +23,6 @@ const ActorDetailPage = () => {
   }
 
   const moviesObjByActor = useGetObjectsById(moviesIdByActor, movies);
-  console.log(moviesObjByActor);
 
   let countSlide = useMemo(() => {
     if (width > 1400) {

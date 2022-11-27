@@ -1,10 +1,10 @@
-import React, { useMemo } from "react";
-import { Link, Navigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { setUser } from "store/slices/userSlice";
 import { useNavigate } from "react-router-dom";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 import { useForm } from "react-hook-form";
 import { db } from "../firebase";
 import SignUp from "components/SignUp";
@@ -12,7 +12,7 @@ import SignUp from "components/SignUp";
 const RegisterPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  const [error, setError] = useState("");
   const {
     register,
     handleSubmit,
@@ -26,21 +26,11 @@ const RegisterPage = () => {
     return color;
   };
 
-  // const getUser = async () => {
-  //   const docRef = doc(db, "users", "qqqqqqqq@mail.ru");
-  //   const user = await getDoc(docRef);
-  //   console.log(user.data());
-  // };
-
-  // useEffect(() => {
-  //   getUser();
-  // }, []);
-
   const handleRegister = (data) => {
-    console.log(data);
+    setError("");
     const auth = getAuth();
-    createUserWithEmailAndPassword(auth, data.email, data.pass).then(
-      async ({ user }) => {
+    createUserWithEmailAndPassword(auth, data.email, data.pass)
+      .then(async ({ user }) => {
         await setDoc(doc(db, "users", user.uid), {
           id: user.uid,
           name: data.name,
@@ -54,7 +44,7 @@ const RegisterPage = () => {
           role: "user",
         });
         localStorage.setItem("uid", user.uid);
-        navigate("/");
+        navigate("/login");
         dispatch(
           setUser({
             id: user.uid,
@@ -70,10 +60,9 @@ const RegisterPage = () => {
           })
         );
         reset();
-      }
-    );
+      })
+      .catch((err) => setError(err.message));
   };
-
   return (
     <div className="mainLogin">
       <div className="login">
@@ -150,10 +139,17 @@ const RegisterPage = () => {
             </label>
           </div>
           {errors.pass && <p className="warning">{errors.pass.message}</p>}
+          <div className="warningForgetPass">
+            {error !== "" ? (
+              <p className="notSend">Email already in use</p>
+            ) : (
+              ""
+            )}
+          </div>
           <div className="flesButtons">
             <SignUp isValid={isValid} />
             <div>
-              <Link to="/login" className="handleButtonReg">
+              <Link to="/login" className="handleButton">
                 login
               </Link>
             </div>

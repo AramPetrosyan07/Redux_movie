@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useMemo } from "react";
 import { useSelector } from "react-redux";
 import "../style/RecommendedMovies.css";
 import RecMovItem from "./RecMovItem";
@@ -46,7 +46,6 @@ const RecommendedMovies = ({ movies, movieId }) => {
 
     return recommendedMovies;
   };
-  // getRecommendedMovies();
 
   let countSlide = useMemo(() => {
     if (width > 1400) {

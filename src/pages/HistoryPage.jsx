@@ -1,12 +1,10 @@
 import { useGetObjectsById } from "hooks/useGetObjectsById";
-import useWindowDimensions from "hooks/WindowDimensions";
 import React from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "../style/HistoryPage.css";
 
 const HistoryPage = () => {
-  const { width } = useWindowDimensions();
   const { movies } = useSelector((state) => state.movies);
   const { moviesHistory } = useSelector((state) => state.user);
   const favoriteMoviesObj = useGetObjectsById(moviesHistory, movies);

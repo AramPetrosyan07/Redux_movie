@@ -14,8 +14,6 @@ const userSLice = createSlice({
         voteMovies: [],
         moviesHistory: [],
         role: null,
-        status: null,
-        error: null,
     },
     reducers: {
         setUser(state, action) {

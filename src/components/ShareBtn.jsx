@@ -4,24 +4,16 @@ import ShareIcon from "@mui/icons-material/Share";
 import {
   FacebookShareButton,
   FacebookIcon,
-  FacebookMessengerShareButton,
-  FacebookMessengerIcon,
   TelegramShareButton,
   TelegramIcon,
 } from "react-share";
 import "../style/ShareBtn.css";
-import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
 const ShareBtn = ({ movie, shareIconBgColor }) => {
   const [shareOpen, setShareOpen] = useState(false);
 
   const toggleOpenSearch = () => setShareOpen(!shareOpen);
 
-  // const copyText = () => {
-  //   movie.ifream.select();
-  //   movie.ifream.setSelectionRange(0, 99999);
-  //   navigator.clipboard.writeText(movie.ifream);
-  // };
   return (
     <div className={shareOpen ? "shareOpen" : "shareClose"}>
       <div
@@ -49,15 +41,6 @@ const ShareBtn = ({ movie, shareIconBgColor }) => {
               <TelegramIcon round={true} className="iconFb" />
             </TelegramShareButton>
           </motion.div>
-          {/* <motion.div
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            <div className="copy_button" onClick={() => copyText()}>
-              <ContentCopyIcon />
-            </div>
-          </motion.div> */}
         </div>
       )}
     </div>

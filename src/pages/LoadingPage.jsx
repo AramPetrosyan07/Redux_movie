@@ -1,11 +1,10 @@
-import Auth from "hooks/Auth";
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import useAuth from "hooks/useAuth";
+import React from "react";
 import "../style/LoadingPage.css";
 
 const LoadingPage = () => {
   let local = localStorage.getItem("uid");
-  Auth(local);
+  useAuth(local);
 
   return (
     <div className="main_loading">

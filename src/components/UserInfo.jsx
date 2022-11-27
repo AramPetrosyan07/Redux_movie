@@ -2,14 +2,12 @@ import React from "react";
 import "../style/UserInfo.css";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import HistoryIcon from "@mui/icons-material/History";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const UserInfo = ({ click }) => {
-  const { name } = useSelector((state) => state.user);
   const navigate = useNavigate();
 
   return (

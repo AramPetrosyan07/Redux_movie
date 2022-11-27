@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { prominent } from "color.js";
 
 import "../style/DetailPage.css";
 import InfoDetailWithBG from "components/InfoDetailWithBG";
-import InfoDetailWithIMG from "components/InfoDetailWithIMG";
 
 const DetailPage = () => {
   const { id } = useParams();
@@ -44,11 +43,7 @@ const DetailPage = () => {
           }}
         >
           <div className="detailPage_container">
-            {movie.background ? (
-              <InfoDetailWithBG movie={movie} movies={movies} />
-            ) : (
-              <InfoDetailWithIMG movie={movie} />
-            )}
+            <InfoDetailWithBG movie={movie} movies={movies} />
           </div>
         </div>
       </div>

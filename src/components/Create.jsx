@@ -3,7 +3,6 @@ import { Link } from "react-scroll";
 
 const Create = ({ isValid, errors, errTextFn, page }) => {
   const getErrorMessage = () => {
-    console.log("clicked");
     let errorArr = [];
     for (let err in errors) {
       errorArr.push(errors[err].message);

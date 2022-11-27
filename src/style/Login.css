@@ -203,3 +203,22 @@
 .forgotPass{
   height: 200px;
 }
+
+.warningForgetPassDiv{
+  width: 100%;
+}
+
+.warningForgetPass{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.notSend{
+  color: rgb(250, 28, 28);
+}
+
+.send{
+  color: rgb(15, 221, 15);
+}
+
